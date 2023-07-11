@@ -1,0 +1,33 @@
+{
+  "name": "streamlogs",
+  "version": "1.0.0",
+  "description": "Node.js module using streams and events.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "node test/check.js"
+  },
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CZmatyasZERO/streamlogs.js.git"
+  },
+  "keywords": [
+    "stream",
+    "streams",
+    "log",
+    "logger",
+    "logging",
+    "event",
+    "eventemmiter",
+    "typescript"
+  ],
+  "author": "Matyáš Klimeš",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CZmatyasZERO/streamlogs.js/issues"
+  },
+  "homepage": "https://github.com/CZmatyasZERO/streamlogs.js#readme",
+  "dependencies": {
+    "@types/node": "^20.4.1"
+  }
+}
