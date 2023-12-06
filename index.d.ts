@@ -1,6 +1,7 @@
 import { Readable } from 'stream';
 import { EventEmitter } from 'events';
 export enum logLevel {trace, debug, info, warn, error, fatal};
+type dateFunction = () => string;
 interface JSONMessage {message:string, level:logLevel, sender:string, timestamp:Date}
 
 interface JSONLogEvents {
@@ -48,6 +49,7 @@ export declare class basicLogger extends Readable, EventEmitter {
     warn(message:string, sender?:string):void
     error(message:string, sender?:string):void
     fatal(message:string, sender?:string):void
+    setDateFunction(func:DateFunction):void
     emit(event: keyof basicLogEvents, ...args: any[]): boolean;
     on<K extends keyof basicLogEvents>(event: K, listener: basicLogEvents[K]): void
     once<K extends keyof basicLogEvents>(event: K, listener: basicLogEvents[K]): void

@@ -15,6 +15,15 @@ module.exports.JSONLogger = JSONLogger
 
 const defLog = new basicLogger(logLevel.info, "System", true)
 defLog.pipe(process.stdout)
+
+process.on("uncaughtException", (err, origin) => {
+    defLog.error(err.message, origin)
+})
+
+process.on("unhandledRejection", (reason, promise) => {
+    defLog.error(String(reason), String(promise))
+})
+
 module.exports.defLog = defLog
 
 
