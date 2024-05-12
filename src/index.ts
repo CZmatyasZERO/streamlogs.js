@@ -17,12 +17,16 @@ const defLog = new basicLogger(logLevel.info, "System", true)
 defLog.pipe(process.stdout)
 
 process.on("uncaughtException", (err, origin) => {
-    defLog.error(err.message, origin)
+    defLog.error(err.stack ? err.stack : err.name, origin)
 })
 
 process.on("unhandledRejection", (reason, promise) => {
     defLog.error(String(reason), String(promise))
 })
+
+process.on('warning', (warning) => {
+    defLog.warn(warning.message, warning.name);
+});
 
 module.exports.defLog = defLog
 
