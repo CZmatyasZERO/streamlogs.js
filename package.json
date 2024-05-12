@@ -29,5 +29,8 @@
   "homepage": "https://github.com/CZmatyasZERO/streamlogs.js#readme",
   "dependencies": {
     "@types/node": "^20.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   }
 }
