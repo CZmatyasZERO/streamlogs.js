@@ -16,6 +16,8 @@ module.exports.JSONLogger = JSONLogger
 const defLog = new basicLogger(logLevel.info, "System", true)
 defLog.pipe(process.stdout)
 
+
+// error handlings
 process.on("uncaughtException", (err, origin) => {
     defLog.error(err.stack ? err.stack : err.name, origin)
 })
