@@ -11,13 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: setup node
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 16
       - run: npm ci
-      - name: typescript compile
       - uses: icrawl/action-tsc@v1
       - run: npm test
 
