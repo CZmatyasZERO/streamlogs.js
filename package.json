@@ -4,7 +4,8 @@
   "description": "Node.js module using streams and events.",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "node test/check.js"
+    "test": "node test/check.js",
+    "build": "tsc"
   },
   "typings": "index.d.ts",
   "repository": {
