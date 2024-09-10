@@ -7,13 +7,13 @@ export enum logLevel {
     fatal
 }
 
-import basicLogger from "./basicLogger"
-import JSONLogger from "./JSONLogger"
+import basic from "./basicLogger"
+import JSON from "./JSONLogger"
 
-module.exports.basicLogger = basicLogger
-module.exports.JSONLogger = JSONLogger
+export const basicLogger = basic
+export const JSONLogger = JSON
 
-const defLog = new basicLogger(logLevel.info, "System", true)
+export const defLog = new basicLogger(logLevel.info, "System", true)
 defLog.pipe(process.stdout)
 
 
@@ -30,10 +30,6 @@ process.on('warning', (warning) => {
     defLog.warn(warning.message, warning.name);
 });
 
-module.exports.defLog = defLog
-
-
-module.exports.logLevel = logLevel;
 
 
 

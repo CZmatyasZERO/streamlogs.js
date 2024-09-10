@@ -1,13 +1,13 @@
 {
   "name": "streamlogs",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Node.js module using streams and events.",
   "main": "./dist/index.js",
   "scripts": {
     "test": "node test/check.js",
     "build": "tsc"
   },
-  "typings": "index.d.ts",
+  "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CZmatyasZERO/streamlogs.js.git"

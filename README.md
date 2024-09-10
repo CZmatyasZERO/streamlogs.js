@@ -25,7 +25,7 @@ defLog.info("Hello world!", "user")
 
 ### New logger pipes into standard output
 
-```plaintext
+```javascript
 const logger = require("streamlogs")
 const log = new logger.basicLogger()
 log.pipe(process.stdout)
